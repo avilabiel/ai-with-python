@@ -165,3 +165,23 @@ for max_leaf_nodes in candidate_max_leaf_nodes:
     print("Max leaf nodes: %d \t\t Mean Absolute Error: %d" %(max_leaf_nodes, my_mae))
 
 ```
+
+## Part 3
+
+```python
+from sklearn.ensemble import RandomForestRegressor
+
+# Define the model. Set random_state to 1
+rf_model = RandomForestRegressor(random_state=1)
+
+# fit your model
+rf_model.fit(train_X, train_y)
+predictions = rf_model.predict(val_X)
+
+# Calculate the mean absolute error of your Random Forest model on the validation data
+rf_val_mae = mean_absolute_error(predictions, val_y)
+
+print("Validation MAE for Random Forest Model: {}".format(rf_val_mae))
+```
+
+To study: https://www.kaggle.com/code/dansbecker/using-categorical-data-with-one-hot-encoding/notebook
