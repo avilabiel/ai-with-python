@@ -168,6 +168,8 @@ for max_leaf_nodes in candidate_max_leaf_nodes:
 
 ## Part 3
 
+The Random Forest Regressor is better because it starts with several Decision Tree Regressor models with random data and it picks the best one.
+
 ```python
 from sklearn.ensemble import RandomForestRegressor
 
@@ -185,3 +187,17 @@ print("Validation MAE for Random Forest Model: {}".format(rf_val_mae))
 ```
 
 To study: https://www.kaggle.com/code/dansbecker/using-categorical-data-with-one-hot-encoding/notebook
+
+## Conclusion
+
+The Machine Learning has the ability to train machines to predict data based on our current data and right inputs. There are multiple models available in the market to help us with that. We learned two of those, which are Decision Tree and Random Forest.
+
+Models basically work with a target (`y`) and features (`X`). Target will always be the item that you want to discover/predict. Features will be used to justify our target.
+
+In ML, there is the possibility of getting better results or not, it basically depends on how good we are picking the right features and the right model. For example, if we pick a lot of features, we may `overfit` our model, in other words, it will find some coincidences and group thing wrongly. However, if we send only a few features, we may `undefit` our model, since it will have just a few options to justify the target (`y`).
+
+Models have their differences. The Random Forest is better than Decison Tree because it automatically discovers what is the best Decision Tree model for the given dataset.
+
+But don't forget, ML is not precise in terms of features, models, etc. Feel free to try new things in your dataset. It would be helpful to get a trained model with less MAE.
+
+MAE = Mean Absolute Error. It is the difference between the real target value - the predicted value.
